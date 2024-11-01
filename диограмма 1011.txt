@@ -12,7 +12,7 @@ activate B
 B -> C: Запрос
 activate C
 C --> B: Ответ
-destroy C
+deactivate C
 
 B --> A: Ответ
 deactivate B
