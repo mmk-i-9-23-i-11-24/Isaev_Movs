@@ -1,0 +1,21 @@
+@startuml
+
+
+participant "Браузер" as A
+participant "Балансировщик" as B
+participant "Сервер" as C
+
+
+A -> B: Запрос
+activate B
+
+B -> C: Запрос
+activate C
+C --> B: Ответ
+destroy C
+
+B --> A: Ответ
+deactivate B
+
+
+@enduml
