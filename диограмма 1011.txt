@@ -1,20 +1,20 @@
 @startuml
 
 
-participant "Браузер" as A
-participant "Балансировщик" as B
-participant "Сервер" as C
+participant "Браузер" as A #98FB98
+participant "Балансировщик" as B #98FB98
+participant "Сервер" as C #98FB98
 
 
-A -> B: Запрос
-activate B
+A -[#4682B4]> B : Запрос
+activate B #ff0000
 
-B -> C: Запрос
-activate C
-C --> B: Ответ
-deactivate C
+B -[#4682B4]> C: Запрос
+activate C #ff0000
+C --[#4682B4]> B: Ответ
+deactivate C 
 
-B --> A: Ответ
+B --[#4682B4]> A: Ответ
 deactivate B
 
 
