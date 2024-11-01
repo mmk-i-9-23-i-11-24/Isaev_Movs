@@ -5,16 +5,20 @@ participant "Браузер" as A #98FB98
 participant "Балансировщик" as B #98FB98
 participant "Сервер" as C #98FB98
 
+skinparam sequence {
+ArrowColor DeepSkyBlue
+LifeLineBorderColor blue
+LifeLineBackgroundColor #A9DCDF}
 
-A -[#4682B4]> B : Запрос
+A -> B : Запрос
 activate B #ff0000
 
-B -[#4682B4]> C: Запрос
+B -> C: Запрос
 activate C #ff0000
-C --[#4682B4]> B: Ответ
+C --> B: Ответ
 deactivate C 
 
-B --[#4682B4]> A: Ответ
+B --> A: Ответ
 deactivate B
 
 
